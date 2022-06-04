@@ -98,7 +98,7 @@ class Board:
             res += f"\n{i + 1} | " + " | ".join(row) + " |"
 
         if self.hid:
-            res += res.replace("■", "O")
+            res = res.replace("■", "O")
         return res
 
     def out(self, d):
