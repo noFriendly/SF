@@ -15,13 +15,13 @@ class PostsList(ListView):
 
 class PostDetail(DetailView):
     model = Post
-    template_name = 'news/new.html'
+    template_name = 'new.html'
     context_object_name = 'new'
 
 class PostSearch(ListView):
     model = Post
     ordering = ['-dateCreation']
-    template_name = 'news/search.html'
+    template_name = 'search.html'
     context_object_name = 'news'
     paginate_by = 10
 
@@ -38,17 +38,17 @@ class PostSearch(ListView):
 class PostCreate(PermissionRequiredMixin, CreateView):
     form_class = PostFormAddAuthor
     model = Post
-    template_name ='news/forms/create.html'
+    template_name ='forms/create.html'
     permission_required = ('news.add_article',)
 
 class PostDelete(PermissionRequiredMixin, DeleteView):
-    template_name = 'news/forms/delete.html'
+    template_name = 'forms/delete.html'
     queryset = Post.objects.all()
     success_url = '/news/search'
     permission_required = ('news.delete_article',)
 
 class PostUpdate(PermissionRequiredMixin, UpdateView):
-    template_name = 'news/forms/update.html'
+    template_name = 'forms/update.html'
     model = Post
     form_class = PostForm
     permission_required = ('news.change_article',)
