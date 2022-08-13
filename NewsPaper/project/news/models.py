@@ -22,9 +22,12 @@ class Author(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=64, unique=True)
+    subscribers = models.ManyToManyField(User)
 
     def __str__(self):
         return self.name.title()
+
+    def add_user(self, authorUser) -> None: self.subscribers.add(authorUser)
 
 
 class Post(models.Model):
@@ -42,6 +45,9 @@ class Post(models.Model):
     title = models.CharField(max_length=128)
     text = models.TextField()
     rating = models.SmallIntegerField(default=0)
+
+    def get_absolute_url(self) -> str:
+        return f'/news/{self.id}'
 
     def like(self):
         self.rating += 1
