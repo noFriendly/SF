@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.forms',
     'django_filters',
     'django_apscheduler',
+    'django_celery_beat',
 
     'allauth',
     'allauth.account',
