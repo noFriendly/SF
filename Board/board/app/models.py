@@ -19,7 +19,6 @@ class Article(models.Model):
     title = models.CharField(max_length=64)
     text = models.TextField()
     category = models.CharField(max_length=11, choices=TYPE, default='tank')
-    upload = models.FileField(upload_to='uploads/')
     dateCreation = models.DateTimeField(auto_now_add=True)
 
 
