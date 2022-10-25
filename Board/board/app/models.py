@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 
 class Article(models.Model):
@@ -17,7 +18,7 @@ class Article(models.Model):
     )
     author = models.OneToOneField(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=64)
-    text = models.TextField()
+    text = models.RichTextField()
     category = models.CharField(max_length=11, choices=TYPE, default='tank')
     dateCreation = models.DateTimeField(auto_now_add=True)
 
