@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Helvetica;
+  }
+    
+  .topnav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+  }
+  
+  .topnav a {
+  color: #f2f2f2;
+  padding: 16px 16px 16px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+  
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+  
+  .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+  
+  .topnav h1 {
+  display: flex;
+  padding: 0px 16px 0px 16px;
+  color: #f2f2f2;
+  font-size: 30px;
+  }
+  
+  #l1 {
+  display: flex;
+  justify-content:flex-start;
+  }
+  
+  #r1 {
+  align-items: flex-end;
+  }
+  
+  .content {
+  margin-left: 3mm;
+  flex-direction: row;
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  margin: 30 30em;
+  }
+  
+  #p1 {
+  display: flex;
+  flex-direction: row;
+  font: 1em sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  }
+  
+  #t {
+  margin-left: 3mm;
+  vertical-align:top;
+  font-size: 25;
+  align-self: flex-start;
+  }
+  
+  .contacts{
+  margin-left: 20mm;
+  display:flex;
+  align-items: center;
+  align-content: space-between;
+  row-gap: 200px;
+  column-gap: 50px;
+  }
+  
+  .contacts a{
+  margin-left: 3mm;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 30px;
+  }
